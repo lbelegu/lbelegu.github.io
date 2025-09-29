@@ -1,1 +1,33 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: #FAF7F4; 
+    --background-contrast: #FFFFFF; 
+    --text: #1C1C1C; 
+  }
+
+  /* dark mode */
+  .dark {
+    --background: #1C1C1C;
+    --background-contrast: #2D2D2D; 
+    --text: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+}
+
+@layer components {
+  .bg-header-light {
+    background-color: #FAF7F4;
+  }
+
+  /* dark mode variant */
+  .dark .bg-header-light {
+    background-color: #1C1C1C;
+  }
+}

@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- cutsom make the preview for links -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Site</title>
   <link href="dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-red-400 text-gray-800 flex items-center justify-center h-screen">
-  <h1 class="text-4xl font-bold">Testing tailwind.</h1>
+
+<body>
+  <header class="fixed flex p-3 bg-header-light/99 shadow-md w-full z-10 justify-items-center backdrop-blur-lg">
+    <div class="w-full flex justify-center">
+      <button id="menu-toggle" class="md:hidden p-2 bg-header-light dark:bg-header-dark rounded">
+        ☰
+      </button>
+      <nav id="menu"
+        class="absolute top-full left-0 w-full justify-items-center md:static md:w-auto md:flex md:flex-row md:items-center md:space-x-6 hidden">
+        <a href="/"
+          class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400">Leon
+          Belegu</a>
+        <a href="#projects"
+          class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
+        <a href="#about"
+          class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400">About</a>
+        <a href="#contact"
+          class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
+      </nav>
+    </div>
+    <button id="theme-toggle" class="p-2 bg-header-light dark:bg-header-dark rounded ml-4">
+      🌓
+    </button>
+  </header>
+  <!-- Main Section -->
+  <main>
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center h-screen text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Welcome to My Portfolio</h2>
+      <p class="text-lg md:text-2xl mb-8 max-w-xl">Showcasing my projects and skills in web development and design.</p>
+      <a href="#projects" class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition">View
+        Projects</a>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="flex flex-col items-center justify-center h-screen text-center">
+      <div class="container mx-auto text-center mt-10">
+        <h3 class="text-3xl font-bold mb-10">My Projects</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mx-2">
+          <div class="p-6 bg-white dark:bg-gray-700 rounded shadow-sm hover:shadow-xl transition-shadow duration-300">
+            <h4 class="text-xl font-semibold">Project 1</h4>
+            <p class="mt-2">Description of project 1</p>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-700 rounded shadow-sm hover:shadow-xl transition-shadow duration-300">
+            <h4 class="text-xl font-semibold">Project 2</h4>
+            <p class="mt-2">Description of project 2</p>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-700 rounded shadow-sm hover:shadow-xl transition-shadow duration-300">
+            <h4 class="text-xl font-semibold">Project 3</h4>
+            <p class="mt-2">Description of project 3</p>
+          </div>
+        </div>
+        <p class="text-lg max-w-2xl mx-auto">I am a passionate web developer with experience in creating dynamic and
+          responsive websites. I love coding and continuously learning new technologies to enhance my skills.</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="flex flex-col items-center justify-center h-screen text-center">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="flex flex-col items-center justify-center h-screen text-center py-20">
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+      <p class="mt-4">
+        Email: <span class="text-red-400">leonbelegu2003@gmail.com</span>
+      </p>
+      <div class="mt-6 flex space-x-4">
+        <a href="https://www.linkedin.com/in/leonbelegu/" class="text-blue-500 hover:underline" target="_blank">
+          LinkedIn</a>
+        <a href="https://github.com/lbelegu" class="text-blue-500 hover:underline" target="_blank"> Github</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- button to top -->
+  <button id="to-top"
+    class="fixed bottom-4 right-4 p-3 bg-red-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition hidden">
+    ↑
+  </button>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-gray-300 dark:bg-gray-700 text-center">
+    <p>&copy; <span id="year"></span> Leon Belegu. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
