@@ -4,6 +4,12 @@ module.exports = {
     './**/*.html',
     './src/**/*.{html,js,ts,jsx,tsx}'
   ],
+  safelist: [
+    "animated-bg",
+    "blob",
+    "blob1",
+    "blob2"
+  ],
   theme: {
     extend: {},
 
