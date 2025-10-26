@@ -24,7 +24,7 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-//menu toggle
+// menu toggle
 document.querySelector("#menu-toggle").addEventListener("click", function () {
     const nav = document.querySelector("nav");
     nav.classList.toggle("hidden");
