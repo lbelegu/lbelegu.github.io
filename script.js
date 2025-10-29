@@ -69,3 +69,31 @@ document.querySelector('a[href="/"]').addEventListener('click', function (e) {
         behavior: 'smooth'
     });
 });
+
+// smooth scrolling for blob movement only when scrolling
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+  const scrollDelta = currentScrollY - lastScrollY;
+
+  const blobs = document.querySelectorAll(".blob");
+
+  blobs.forEach((blob, i) => {
+    const offsetY = currentScrollY * (0.15 + i * 0.05);
+    const offsetX = Math.sin(currentScrollY * 0.002 + i) * 120;
+
+    blob.style.transform = `translate(${offsetX}px, ${offsetY * 0.5}px) scale(${1.1 + i * 0.1})`;
+  });
+
+  lastScrollY = currentScrollY;
+
+  // stop movement smoothly when scrolling ends
+  if (!ticking) {
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      ticking = false;
+    });
+  }
+});

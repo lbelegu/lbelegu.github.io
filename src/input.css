@@ -2,118 +2,174 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  :root {
-    --background: #FAF7F4; 
-    --background-contrast: #FFFFFF; 
-    --text: #1C1C1C; 
-  }
+    :root {
+        --background: #FAF7F4;
+        --background-contrast: #FFFFFF;
+        --text: #1C1C1C;
+    }
 
-  /* dark mode */
-  .dark {
-    --background: #1C1C1C;
-    --background-contrast: #2D2D2D; 
-    --text: #FFFFFF;
-  }
+    /* dark mode */
+    .dark {
+        --background: #1C1C1C;
+        --background-contrast: #2D2D2D;
+        --text: #FFFFFF;
+    }
 
-  body {
-    background-color: var(--background);
-    color: var(--text);
-  }
+    body {
+        background-color: var(--background);
+        color: var(--text);
+    }
 }
 
 @layer components {
-  .bg-header-light {
-    background-color: #FAF7F4;
-  }
+    .bg-header-light {
+        background-color: #FAF7F4;
+    }
 
-  /* dark mode variant */
-  .dark .bg-header-light {
-    background-color: #1C1C1C;
-  }
+    /* dark mode variant */
+    .dark .bg-header-light {
+        background-color: #1C1C1C;
+    }
 }
 
 @layer utilities {
-  /* gradient background w/ subtle movement */
-  @keyframes gradientFlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 
-  .animated-bg {
-    background: linear-gradient(-50deg, #1a0000, #510000, #000000, #3b0000);
-    background-size: 400% 400%;
-    animation: gradientFlow 15s ease infinite;
-    opacity: 0.25;
-  }
+    /* gradient background w/ subtle movement */
+    @keyframes gradientFlow {
+        0% {
+            background-position: 0% 50%;
+        }
 
-  /* blob movement*/
-  @keyframes blobMove1 {
-    0%, 100% {
-      transform: translate(0, 0) scale(1.1);
-    }
-    25% {
-      transform: translate(100px, -80px) scale(1.2);
-    }
-    50% {
-      transform: translate(-60px, 60px) scale(1.05);
-    }
-    75% {
-      transform: translate(80px, 120px) scale(1.15);
-    }
-  }
+        50% {
+            background-position: 100% 50%;
+        }
 
-  @keyframes blobMove2 {
-    0%, 100% {
-      transform: translate(0, 0) scale(1.2);
+        100% {
+            background-position: 0% 50%;
+        }
     }
-    25% {
-      transform: translate(-120px, 60px) scale(1.3);
-    }
-    50% {
-      transform: translate(100px, -100px) scale(1.1);
-    }
-    75% {
-      transform: translate(-80px, 80px) scale(1.25);
-    }
-  }
 
-  /* base blob styles */
+    .animated-bg {
+        background: linear-gradient(-50deg, #1a0000, #510000, #000000, #3b0000);
+        background-size: 400% 400%;
+        animation: gradientFlow 15s ease infinite;
+        opacity: 0.25;
+    }
+
+    /* blob movement*/
+    @keyframes blobMove1 {
+
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1.1);
+        }
+
+        25% {
+            transform: translate(200px, -160px) scale(1.25);
+        }
+
+        50% {
+            transform: translate(-150px, 180px) scale(1.05);
+        }
+
+        75% {
+            transform: translate(220px, 200px) scale(1.2);
+        }
+    }
+
+    @keyframes blobMove2 {
+
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1.2);
+        }
+
+        25% {
+            transform: translate(-250px, 120px) scale(1.3);
+        }
+
+        50% {
+            transform: translate(200px, -220px) scale(1.1);
+        }
+
+        75% {
+            transform: translate(-200px, 180px) scale(1.25);
+        }
+    }
+
+    /* base blob styles */
+    .blob {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(160px);
+        opacity: 0.7;
+        mix-blend-mode: screen;
+        pointer-events: none;
+        z-index: 0;
+        will-change: transform;
+        transition: transform 0.5s ease-out;
+    }
+
+    /* first blob (top-left) */
+    .blob1 {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle at 30% 30%, #ff1a1a, #300000 80%);
+        top: -150px;
+        left: -150px;
+        /* animation: blobMove1 10s ease-in-out infinite; */
+    }
+
+    /* second blob (bottom-right) */
+    .blob2 {
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle at 70% 70%, #a30000, #1a0000 90%);
+        bottom: -100px;
+        right: -100px;
+        /* animation: blobMove2 12s ease-in-out infinite; */
+    }
+}
+
+/* adjustments for mobile view */
+@media (max-width: 768px) {
   .blob {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(160px);
-    opacity: 0.7;
-    mix-blend-mode: screen;
-    pointer-events: none;
-    z-index: 0;
-    will-change: transform;
-    transition: transform 0.5s ease-out;
+    filter: blur(80px);
+    opacity: 0.6;
   }
 
-  /* first blob (top-left) */
   .blob1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle at 30% 30%, #ff1a1a, #300000 80%);
-    top: -150px;
-    left: -150px;
-    animation: blobMove1 10s ease-in-out infinite;
+    width: 250px;
+    height: 250px;
+    top: -60px;
+    left: -60px;
   }
 
-  /* second blob (bottom-right) */
   .blob2 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle at 70% 70%, #a30000, #1a0000 90%);
-    bottom: -100px;
-    right: -100px;
-    animation: blobMove2 12s ease-in-out infinite;
+    width: 300px;
+    height: 300px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blob {
+    filter: blur(60px);
+    opacity: 0.5;
+  }
+
+  .blob1 {
+    width: 200px;
+    height: 200px;
+    top: -40px;
+    left: -40px;
+  }
+
+  .blob2 {
+    width: 220px;
+    height: 220px;
+    bottom: 10px;
+    right: 10px;
   }
 }
