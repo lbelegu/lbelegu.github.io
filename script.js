@@ -33,6 +33,14 @@ document.querySelector("#menu-toggle").addEventListener("click", function () {
     }
 });
 
+// close menu on link click (for mobile)
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        const nav = document.querySelector("nav");
+        nav.classList.add("hidden");
+    });
+});
+
 // scroll to top button
 const toTopButton = document.getElementById("to-top");
 
