@@ -320,11 +320,34 @@ main,
 }
 
 .status-dot {
+  position: relative;
   flex: none;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: currentColor;
+}
+
+/* "Live" pulse: a ring that grows out of the dot and fades */
+.status-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: currentColor;
+  animation: live-pulse 2s ease-out infinite;
+}
+
+@keyframes live-pulse {
+  from {
+    opacity: 0.6;
+    scale: 1;
+  }
+
+  to {
+    opacity: 0;
+    scale: 2.8;
+  }
 }
 
 .profile-card__links {
