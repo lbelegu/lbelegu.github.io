@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Rescue Portal — Case study — Leon Belegu</title>
+  <meta name="description"
+    content="How a spreadsheet of at-risk federal datasets became a searchable public archive, and what a deploy pipeline taught me.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__name" href="../index.html">Leon Belegu</a>
+      <nav aria-label="Main">
+        <ul class="site-nav">
+          <li><a href="../index.html#work">← All work</a></li>
+          <li><a class="button button--primary" href="../index.html#contact">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container case-study">
+    <section class="case-study__intro" aria-labelledby="case-title">
+      <p class="eyebrow">Case study · Federal data</p>
+      <h1 id="case-title">Making at-risk federal data findable</h1>
+      <p class="case-study__lede">How a spreadsheet of rescued government datasets became a searchable public
+        archive, and what a deploy pipeline taught me along the way.</p>
+    </section>
+
+    <dl class="case-meta">
+      <div>
+        <dt>Role</dt>
+        <dd>Frontend Developer</dd>
+      </div>
+      <div>
+        <dt>With</dt>
+        <dd>New America, Data Rescue Project</dd>
+      </div>
+      <div>
+        <dt>Timeline</dt>
+        <dd>Feb – Jun 2025</dd>
+      </div>
+      <div>
+        <dt>Stack</dt>
+        <dd>Jekyll, Liquid, Bootstrap, GitHub Actions</dd>
+      </div>
+    </dl>
+
+    <figure class="case-figure">
+      <div class="case-figure__media project-card__media project-card__media--dark" aria-hidden="true">
+        <span>Data Rescue Portal</span>
+      </div>
+    </figure>
+
+    <section class="case-section" aria-labelledby="problem-title">
+      <h2 id="problem-title">The problem</h2>
+      <p>Volunteers with the Data Rescue Project were saving federal datasets at risk of disappearing, but the
+        results lived in a spreadsheet. Researchers and journalists had no practical way to find what had been
+        saved.</p>
+    </section>
+
+    <section class="case-section" aria-labelledby="built-title">
+      <h2 id="built-title">What I built</h2>
+      <ul>
+        <li>Moved the spreadsheet of 2,900+ datasets into a searchable static site built with Jekyll</li>
+        <li>Built navigation across 21 sectors, so people can browse by topic instead of guessing dataset names</li>
+        <li>Built the homepage, dataset cards and responsive layouts, including the mobile navigation</li>
+      </ul>
+    </section>
+
+    <section class="case-section case-section--callout" aria-labelledby="lesson-title">
+      <h2 id="lesson-title">What I'd do differently</h2>
+      <p>I was tasked with adding pagination. I tried it two ways, first with Jekyll's paginator and then in the
+        site's JavaScript, but neither showed up on the live site. With launch close, I removed it and shipped search
+        and sector navigation instead, so people could find datasets on day one.</p>
+      <p>Later, a teammate found the cause: our GitHub Actions workflow only ran the Jekyll build and never compiled
+        the site's JavaScript, so none of my script changes ever reached production. One added build step fixed it.
+        Now, when a change doesn't show up live, I check what the deploy pipeline actually builds before I question
+        the code, and I ask for a second set of eyes sooner.</p>
+    </section>
+
+    <section class="case-section" aria-labelledby="outcome-title">
+      <h2 id="outcome-title">Outcome</h2>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__value">2,900+</span>
+          <span class="stat__label">datasets searchable when I finished</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">9,700+</span>
+          <span class="stat__label">datasets the archive holds today</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">21</span>
+          <span class="stat__label">sectors in the navigation</span>
+        </div>
+      </div>
+      <p>The portal was covered by
+        <a href="https://www.nytimes.com/2025/09/18/climate/trump-federal-data-climate-change-health.html"
+          target="_blank">The New York Times in September 2025 ↗</a>.
+      </p>
+    </section>
+
+    <div class="case-study__actions">
+      <a class="button button--primary" href="https://portal.datarescueproject.org/" target="_blank">Visit the portal
+        ↗</a>
+      <a class="button button--secondary" href="https://github.com/datarescueproject/portal" target="_blank">View the
+        source ↗</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© 2026 Leon Belegu</span>
+      <a href="../index.html#work">← Back to all work</a>
+    </div>
+  </footer>
+</body>
+
+</html>

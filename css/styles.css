@@ -831,6 +831,116 @@ a.project-card:hover {
 }
 
 /* ==========================================================================
+   Case study pages
+   ========================================================================== */
+
+.case-study {
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-top: var(--space-7);
+  padding-bottom: 120px;
+}
+
+.case-study__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.case-study__intro h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.case-study__lede {
+  font-size: 19px;
+  color: var(--color-text-muted);
+}
+
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-5);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.case-meta dt {
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.case-meta dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.case-figure__media {
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+}
+
+.case-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.case-section h2 {
+  font-size: 28px;
+}
+
+.case-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 22px;
+}
+
+.case-section a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.case-section--callout {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.case-study__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.button--secondary {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.button--secondary:hover {
+  border-color: var(--color-accent);
+}
+
+/* ==========================================================================
    Motion
    ========================================================================== */
 
