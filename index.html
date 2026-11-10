@@ -32,12 +32,44 @@
 
   <main id="main" class="container layout">
     <aside class="layout__sidebar" aria-label="Profile">
-      <!-- Profile card: step 2 -->
+      <div class="profile-card">
+        <picture>
+          <source srcset="assets/img/leon.webp" type="image/webp">
+          <img class="profile-card__photo" src="assets/img/leon.jpg" width="800" height="1208"
+            alt="Leon Belegu smiling, in a white shirt and black tie on a New York street">
+        </picture>
+
+        <div class="profile-card__intro">
+          <h2 class="profile-card__name">Leon Belegu</h2>
+          <p class="profile-card__tagline">Software, data &amp; product for mission-driven teams. New York City.</p>
+        </div>
+
+        <p class="profile-card__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Claude Corps Fellow · 2026
+        </p>
+
+        <ul class="profile-card__links" role="list">
+          <li><a href="https://www.linkedin.com/in/leonbelegu/">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/lbelegu">GitHub ↗</a></li>
+          <li><a href="mailto:leonbelegu2003@gmail.com">Email</a></li>
+        </ul>
+      </div>
     </aside>
 
     <div class="layout__content">
-      <section id="top" aria-labelledby="hero-title">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Cross-sector technologist</p>
         <h1 id="hero-title">I build software and data tools for mission-driven teams.</h1>
+        <p class="hero__lede">The field changes, the job doesn't. I get up to speed fast, find what's slowing people down,
+          build the fix, and explain it to the people who will use it.</p>
+        <ul class="tag-list" role="list" aria-label="Sectors I've worked in">
+          <li class="tag">Federal data</li>
+          <li class="tag">Global edtech</li>
+          <li class="tag">Youth nonprofits</li>
+          <li class="tag">Civic tech</li>
+          <li class="tag">Startups</li>
+        </ul>
       </section>
 
       <section id="work" aria-labelledby="work-title">
