@@ -473,12 +473,13 @@ main,
 }
 
 a.project-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 a.project-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 28px 56px -28px rgba(70, 10, 18, 0.4);
+  border-color: rgba(142, 27, 36, 0.35);
+  box-shadow: 0 24px 48px -20px rgba(142, 27, 36, 0.45);
   color: var(--color-text);
 }
 
@@ -581,7 +582,9 @@ a.project-card:hover {
 
 @media (prefers-reduced-motion: reduce) {
   a.project-card,
-  a.project-card:hover {
+  a.project-card:hover,
+  .case-figure__image,
+  .case-figure__link:hover .case-figure__image {
     transition: none;
     transform: none;
   }
@@ -895,12 +898,25 @@ a.project-card:hover {
   font-weight: 500;
 }
 
+.case-figure__link {
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
 .case-figure__image {
   width: 100%;
   height: auto;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Same red hover lift as the project cards */
+.case-figure__link:hover .case-figure__image {
+  transform: translateY(-3px);
+  border-color: rgba(142, 27, 36, 0.35);
+  box-shadow: 0 24px 48px -20px rgba(142, 27, 36, 0.45);
 }
 
 .case-section {
