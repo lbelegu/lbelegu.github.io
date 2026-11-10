@@ -2,275 +2,68 @@
 <html lang="en">
 
 <head>
-  <!-- TODO: cutsom make the preview for links -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Site</title>
-  <link href="dist/output.css" rel="stylesheet">
+  <title>Leon Belegu — Software, data &amp; product for mission-driven teams</title>
+  <meta name="description" content="Leon Belegu builds software and data tools for mission-driven organizations across civic tech, education and nonprofits.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="relative min-h-screen bg-black">
-  <div class="inset-0 z-0 pointer-events-none">
-    <div class="animated-bg"></div>
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-  </div>
-  <header
-    class="fixed flex items-center justify-between p-3 bg-header-light/99 shadow-md w-full z-20 backdrop-blur-lg pointer-events-auto">
-    <div class="flex items-center">
-      <button id="menu-toggle" class="md:hidden p-2 rounded">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900 dark:text-gray-100" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__name" href="#top">Leon Belegu</a>
+      <nav aria-label="Main">
+        <ul class="site-nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
+          <li><a class="button button--primary" href="#contact">Get in touch</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav id="menu"
-      class="absolute top-full left-0 w-full bg-header-light dark:bg-header-dark flex flex-col items-start space-y-2 p-3 shadow-md
-           md:static md:w-auto md:flex md:flex-row md:items-center md:space-x-6 md:space-y-0 md:p-0 md:bg-transparent md:shadow-none md:justify-center hidden md:flex">
-      <a href="/"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Leon
-        Belegu</a>
-      <a href="#about"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">About</a>
-      <a href="#experience"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Experience</a>
-      <a href="#projects"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Projects</a>
-      <a href="#contact"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Contact</a>
-    </nav>
-
-    <button id="theme-toggle" class="p-2 rounded ml-4">
-      🌓
-    </button>
   </header>
 
-  <!-- Main Section -->
-  <main class="relative z-10">
-    <!-- Hero Section -->
-    <section class="h-screen flex flex-col items-center justify-center text-center text-white">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome!</h1>
-      <p class="text-lg md:text-2xl mb-8 max-w-xl text-gray-300 mb-8">
-        I'm Leon Belegu and this is my portfolio site!
-      </p>
-      <a href="#about" class="px-6 py-3 bg-white/10 border border-white rounded-full hover:bg-white/20 transition">
-        WHO'S LEON?
-      </a>
-      <!-- more options: discoer more, behind the code, learn more -->
-    </section>
+  <main id="main" class="container layout">
+    <aside class="layout__sidebar" aria-label="Profile">
+      <!-- Profile card: step 2 -->
+    </aside>
 
-    <!-- About -->
-    <section id="about" class="relative z-10 flex justify-center py-24 px-6">
-      <div
-        class="max-w-4xl bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-10 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-        <h2 class="text-3xl font-bold text-white mb-6 text-center">
-          About Me
-        </h2>
-        <p class="text-gray-300 leading-relaxed text-lg">
-          Hey! I'm <span class="text-red-400 font-semibold">Leon Belegu</span>, a computer science graduate
-          and data enthusiast passionate about designing clean, functional, and visually
-          dynamic web experiences. My background in data science and creative technology drives
-          me to build tools that balance performance and aesthetics.
-        </p>
-        <p class="text-gray-400 leading-relaxed mt-4">
-          Outside of coding, I'm inspired by design, music, and the intersection of art and
-          technology. I love experimenting with new front-end techniques to make digital
-          experiences feel alive.
-        </p>
-      </div>
-    </section>
+    <div class="layout__content">
+      <section id="top" aria-labelledby="hero-title">
+        <h1 id="hero-title">I build software and data tools for mission-driven teams.</h1>
+      </section>
 
-    <!-- Experience -->
-    <section id="experience" class="relative z-10 py-24 px-6 flex justify-center">
-      <div class="max-w-5xl w-full">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center">
-          Experience
-        </h2>
+      <section id="work" aria-labelledby="work-title">
+        <h2 id="work-title">Selected work</h2>
+      </section>
 
-        <div class="space-y-10">
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+      </section>
 
-          <!-- experience card 1-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Front-End Developer (Open Source) | Data Rescue Portal with New America
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Feb. 2025 - Jun. 2025</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Developed and maintained the front-end of the Data Rescue Portal, an open-source site built with JKAN
-                and Jekyll to make 1,300+ archived datasets accessible through user-friendly navigation — later featured
-                in <span class="italic text-gray-200">The New York Times</span> (Oct. 2025).</li>
-              <li>Implemented dynamic components and styled dataset pages to display key metadata, improving usability
-                and readability.</li>
-              <li>Collaborated with senior developer and designer, contributing 20+ commits and ensuring cross-page
-                functionality through QA.</li>
-            </ul>
-          </div>
+      <section id="toolkit" aria-labelledby="toolkit-title">
+        <h2 id="toolkit-title">Toolkit</h2>
+      </section>
 
-          <!-- experience card 2 -->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Data Science Intern | Fab Inc.
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Aug. 2024 - Oct. 2024</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Conducted clustering analysis on chatbot conversation threads to identify key subject areas using
-                Python and scikit-learn.</li>
-              <li>Generated and visualized message embeddings with t-SNE, highlighting communication trends across
-                research groups.</li>
-              <li>Used statistical methods (t-tests, chi-square) to assess variation in message frequency and thread
-                interactions.</li>
-            </ul>
-          </div>
-
-          <!-- experience card 3-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Data Management Intern | Alaska Afterschool Network with build4good
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Jun. 2024 - Jul. 2024</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Automated data entry workflows with Python, BeautifulSoup, and Pandas, reducing manual processing
-                time.</li>
-              <li>Built Salesforce objects and handled data imports to optimize system functionality.</li>
-              <li>Supported AI chatbot development for OER Commons focused on accessibility and voice recognition.</li>
-            </ul>
-          </div>
-
-          <!-- experience card 4-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Product Manager & Software Engineer Intern | Unadat
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Jul. 2023 - Aug. 2023</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Led a software team of 13 using Agile methodologies to track tasks in Asana and conduct daily
-                stand-ups.</li>
-              <li>Redesigned application UI and implemented a data-driven dynamic module using JavaScript, PHP, and CSS
-                in GCS.</li>
-              <li>Created weekly progress reports and presented updates in team demos via Notion.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="relative z-10 py-24 px-6 flex justify-center">
-      <div class="max-w-5xl w-full">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center">
-          Projects
-        </h2>
-
-        <div class="grid gap-10 md:grid-cols-2">
-          <!-- project card 1-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Replica Voting Algorithm
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Python, scikit-learn, TensorFlow, NumPy, Matplotlib | Jan. 2025 - May
-              2025</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Designed and simulated a Replica Voting Algorithm to evaluate fault tolerance in distributed systems
-                with varying client/server counts and failure probabilities.</li>
-              <li>Trained and compared three ML models (LSTM, Random Forest, Gradient Boosting) achieving high
-                predictive accuracy (low MAE and RMSE).</li>
-              <li>Performed statistical analysis and built 10+ data visualizations in Matplotlib to assess performance
-                trade-offs.</li>
-            </ul>
-          </div>
-
-          <!-- project card 2-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              AI Recipe Generator
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Python, scikit-learn, Pandas, SentenceTransformer | Nov. 2024 - Dec.
-              2024</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Built an AI-powered recipe recommendation system using SentenceTransformer embeddings and cosine
-                similarity to match user-input ingredients with recipes.</li>
-              <li>Optimized accuracy via feature engineering and class imbalance handling, improving recommendation
-                performance.</li>
-            </ul>
-          </div>
-
-          <!-- project card 3-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)] md:col-span-2">
-            <h3 class="text-xl font-semibold text-red-400">
-              SocialPulse
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">JavaScript, React, CSS, HTML, Heroku, MongoDB, Cloudinary | Sep. 2023
-              - Dec. 2023</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Developed and designed a full-stack messaging and posting app using React and MongoDB, with Cloudinary
-                for media uploads and Heroku deployment.</li>
-              <li>Produced 70+ pages of technical documentation, including ER diagrams, collaboration diagrams, and
-                detailed use-case diagrams for all system actions.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="py-16 text-center text-white">
-      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-      <div class="space-y-2">
-        <p class="text-lg">
-          <a href="tel:+13479221379" class="hover:text-indigo-400 transition">347-922-1379</a>
-        </p>
-        <p class="text-lg">
-          <a href="mailto:leonbelegu2003@gmail.com" class="hover:text-indigo-400 transition">
-            leonbelegu2003@gmail.com
-          </a>
-        </p>
-        <p class="text-lg">
-          <a href="https://linkedin.com/in/leonbelegu/" target="_blank" class="hover:text-indigo-400 transition">
-            linkedin.com/in/leonbelegu
-          </a>
-        </p>
-        <p class="text-lg">
-          <a href="https://github.com/lbelegu" target="_blank" class="hover:text-indigo-400 transition">
-            github.com/lbelegu
-          </a>
-        </p>
-      </div>
-    </section>
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Let's talk</h2>
+      </section>
+    </div>
   </main>
 
-  <!-- button to top -->
-  <button id="to-top"
-    class="fixed bottom-4 right-4 p-3 bg-red-500 text-white rounded-full z-20 shadow-lg hover:bg-blue-600 transition hidden">
-    ↑
-  </button>
-
-  <!-- Footer -->
-  <footer class="py-4 bg-gray-300 dark:bg-black text-center">
-    <p>&copy; <span id="year"></span> Leon Belegu. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© 2026 Leon Belegu</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
-
-<!-- TODO:
-- fix header for mobile view
-- fix light mode styles
-- elaborate on all my content
-- add in more projects/experience (AND LINKS)
-- add a section for education
-- fix headings for each section. inside or outside the boxes?
-- custom make the preview for links
-- make scroll up button smaller for mobile?
- -->
