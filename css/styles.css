@@ -287,7 +287,7 @@ main,
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: 50% 45%;
+  object-position: 50% 70%;
   border-radius: 16px;
 }
 
@@ -601,6 +601,7 @@ a.project-card:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   a.project-card,
   a.project-card:hover,
   .case-figure__image,
@@ -611,11 +612,11 @@ a.project-card:hover {
 }
 
 /* Experience: cards joined by chain links */
-.xp-chain > li {
+.xp-chain>li {
   position: relative;
 }
 
-.xp-chain > li:not(:last-child) {
+.xp-chain>li:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -839,7 +840,7 @@ a.project-card:hover {
   pointer-events: none;
 }
 
-.contact > * {
+.contact>* {
   position: relative;
 }
 
@@ -1177,23 +1178,39 @@ a.project-card:hover {
 }
 
 @keyframes drift-1 {
-  50% { transform: translate(-8vw, 10vh) scale(1.15); }
-  100% { transform: translate(4vw, 18vh) scale(0.92); }
+  50% {
+    transform: translate(-8vw, 10vh) scale(1.15);
+  }
+
+  100% {
+    transform: translate(4vw, 18vh) scale(0.92);
+  }
 }
 
 @keyframes drift-2 {
-  50% { transform: translate(12vw, -8vh) scale(0.9); }
-  100% { transform: translate(-4vw, -14vh) scale(1.2); }
+  50% {
+    transform: translate(12vw, -8vh) scale(0.9);
+  }
+
+  100% {
+    transform: translate(-4vw, -14vh) scale(1.2);
+  }
 }
 
 @keyframes drift-3 {
-  50% { transform: translate(-14vw, -10vh) scale(1.1); }
-  100% { transform: translate(10vw, 6vh) scale(0.95); }
+  50% {
+    transform: translate(-14vw, -10vh) scale(1.1);
+  }
+
+  100% {
+    transform: translate(10vw, 6vh) scale(0.95);
+  }
 }
 
 /* Scroll reveals: cards rise in as they enter the viewport.
    Uses CSS scroll-driven animations; browsers without support show everything as normal. */
 @supports (animation-timeline: view()) {
+
   .stat,
   .project-card,
   .xp-card,
@@ -1283,6 +1300,7 @@ a.project-card:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
