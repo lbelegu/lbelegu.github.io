@@ -2,275 +2,399 @@
 <html lang="en">
 
 <head>
-  <!-- TODO: cutsom make the preview for links -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Site</title>
-  <link href="dist/output.css" rel="stylesheet">
+  <title>Leon Belegu — Software, data &amp; product for mission-driven teams</title>
+  <meta name="description"
+    content="Leon Belegu builds software and data tools for mission-driven organizations across civic tech, education and nonprofits.">
+
+  <link rel="canonical" href="https://lbelegu.github.io/">
+  <meta name="theme-color" content="#F7F4F2">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Link previews (LinkedIn, Slack, iMessage, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lbelegu.github.io/">
+  <meta property="og:title" content="Leon Belegu — Software, data &amp; product for mission-driven teams">
+  <meta property="og:description"
+    content="I build software and data tools for mission-driven organizations across civic tech, education and nonprofits.">
+  <meta property="og:image" content="https://lbelegu.github.io/assets/og-image.jpg">
+  <meta property="og:image:alt" content="Leon Belegu, cross-sector technologist">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="relative min-h-screen bg-black">
-  <div class="inset-0 z-0 pointer-events-none">
-    <div class="animated-bg"></div>
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
   </div>
-  <header
-    class="fixed flex items-center justify-between p-3 bg-header-light/99 shadow-md w-full z-20 backdrop-blur-lg pointer-events-auto">
-    <div class="flex items-center">
-      <button id="menu-toggle" class="md:hidden p-2 rounded">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900 dark:text-gray-100" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__name" href="#top">Leon Belegu</a>
+      <nav aria-label="Main">
+        <ul class="site-nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
+          <li><a class="button button--primary" href="#contact">Get in touch</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav id="menu"
-      class="absolute top-full left-0 w-full bg-header-light dark:bg-header-dark flex flex-col items-start space-y-2 p-3 shadow-md
-           md:static md:w-auto md:flex md:flex-row md:items-center md:space-x-6 md:space-y-0 md:p-0 md:bg-transparent md:shadow-none md:justify-center hidden md:flex">
-      <a href="/"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Leon
-        Belegu</a>
-      <a href="#about"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">About</a>
-      <a href="#experience"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Experience</a>
-      <a href="#projects"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Projects</a>
-      <a href="#contact"
-        class="block px-4 py-2 text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:hover:text-red-400">Contact</a>
-    </nav>
-
-    <button id="theme-toggle" class="p-2 rounded ml-4">
-      🌓
-    </button>
   </header>
 
-  <!-- Main Section -->
-  <main class="relative z-10">
-    <!-- Hero Section -->
-    <section class="h-screen flex flex-col items-center justify-center text-center text-white">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome!</h1>
-      <p class="text-lg md:text-2xl mb-8 max-w-xl text-gray-300 mb-8">
-        I'm Leon Belegu and this is my portfolio site!
-      </p>
-      <a href="#about" class="px-6 py-3 bg-white/10 border border-white rounded-full hover:bg-white/20 transition">
-        WHO'S LEON?
-      </a>
-      <!-- more options: discoer more, behind the code, learn more -->
-    </section>
+  <main id="main" class="container layout">
+    <aside class="layout__sidebar" aria-label="Profile">
+      <div class="profile-card">
+        <picture>
+          <source srcset="assets/img/leon.webp" type="image/webp">
+          <img class="profile-card__photo" src="assets/img/leon.jpg" width="800" height="1208"
+            alt="Leon Belegu smiling, in a white shirt and black tie on a New York street">
+        </picture>
 
-    <!-- About -->
-    <section id="about" class="relative z-10 flex justify-center py-24 px-6">
-      <div
-        class="max-w-4xl bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-10 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-        <h2 class="text-3xl font-bold text-white mb-6 text-center">
-          About Me
-        </h2>
-        <p class="text-gray-300 leading-relaxed text-lg">
-          Hey! I'm <span class="text-red-400 font-semibold">Leon Belegu</span>, a computer science graduate
-          and data enthusiast passionate about designing clean, functional, and visually
-          dynamic web experiences. My background in data science and creative technology drives
-          me to build tools that balance performance and aesthetics.
+        <div class="profile-card__intro">
+          <h2 class="profile-card__name">Leon Belegu</h2>
+          <p class="profile-card__tagline">Software, data &amp; product for mission-driven teams. New York City.</p>
+        </div>
+
+        <div class="profile-card__education">
+          <p class="profile-card__degree">B.S. Computer Science</p>
+          <p>Macaulay Honors College, CCNY</p>
+          <p>3.87 GPA · Dean's List every semester</p>
+        </div>
+
+        <p class="profile-card__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Claude Corps Fellow · 2026
         </p>
-        <p class="text-gray-400 leading-relaxed mt-4">
-          Outside of coding, I'm inspired by design, music, and the intersection of art and
-          technology. I love experimenting with new front-end techniques to make digital
-          experiences feel alive.
-        </p>
+
+        <ul class="profile-card__links" role="list">
+          <li><a href="https://www.linkedin.com/in/leonbelegu/" target="_blank">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/lbelegu" target="_blank">GitHub ↗</a></li>
+          <li><a href="mailto:leonbelegu2003@gmail.com">Email</a></li>
+        </ul>
       </div>
-    </section>
+    </aside>
 
-    <!-- Experience -->
-    <section id="experience" class="relative z-10 py-24 px-6 flex justify-center">
-      <div class="max-w-5xl w-full">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center">
-          Experience
-        </h2>
+    <div class="layout__content">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Cross-sector technologist</p>
+        <h1 id="hero-title">I build software and data tools for mission-driven teams.</h1>
+        <p class="hero__lede">The field changes, the job doesn't. I get up to speed fast, find what's slowing people
+          down,
+          build the fix, and explain it to the people who will use it.</p>
+        <ul class="tag-list" role="list" aria-label="Sectors I've worked in">
+          <li class="tag">Federal data</li>
+          <li class="tag">Global edtech</li>
+          <li class="tag">Youth nonprofits</li>
+          <li class="tag">Civic tech</li>
+          <li class="tag">Startups</li>
+        </ul>
+      </section>
 
-        <div class="space-y-10">
+      <section class="stats" aria-label="By the numbers">
+        <div class="stat">
+          <span class="stat__value">9,700+</span>
+          <span class="stat__label">at-risk federal datasets now in the portal I helped build</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">5</span>
+          <span class="stat__label">sectors shipped in, from government data to edtech in Sierra Leone</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">NYT</span>
+          <span class="stat__label">coverage of the Data Rescue Portal, Sep 2025</span>
+        </div>
+      </section>
 
-          <!-- experience card 1-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Front-End Developer (Open Source) | Data Rescue Portal with New America
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Feb. 2025 - Jun. 2025</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Developed and maintained the front-end of the Data Rescue Portal, an open-source site built with JKAN
-                and Jekyll to make 1,300+ archived datasets accessible through user-friendly navigation — later featured
-                in <span class="italic text-gray-200">The New York Times</span> (Oct. 2025).</li>
-              <li>Implemented dynamic components and styled dataset pages to display key metadata, improving usability
-                and readability.</li>
-              <li>Collaborated with senior developer and designer, contributing 20+ commits and ensuring cross-page
-                functionality through QA.</li>
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section__header">
+          <h2 id="work-title">Selected work</h2>
+          <p class="section__note">Three fields, one way of working</p>
+        </div>
+
+        <a class="project-card project-card--featured" href="work/data-rescue-portal.html">
+          <div class="project-card__media">
+              <img src="assets/img/projects/data-rescue-portal-datasets.webp" alt="Data Rescue Portal datasets page with search and filters by status and category" loading="lazy">
+            </div>
+          <div class="project-card__body">
+            <p class="project-card__meta">Federal data · New America</p>
+            <h3 class="project-card__title">Data Rescue Portal</h3>
+            <p class="project-card__summary">Turned a spreadsheet of at-risk government datasets into a searchable
+              public archive, with navigation across 21 sectors.</p>
+            <span class="project-card__cta">Read case study →</span>
+          </div>
+        </a>
+
+        <div class="project-grid">
+          <a class="project-card" href="https://sanjanas18.github.io/npl-open-source-project/" target="_blank">
+            <div class="project-card__media">
+              <img src="assets/img/projects/child-care-navigator.webp" alt="Dependency graph highlighting the steps that lead into a site viability check" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Civic tech · New Practice Lab</p>
+              <h3 class="project-card__title">Child Care Navigator</h3>
+              <p class="project-card__summary">A dependency graph that shows future providers which licensing steps can
+                run in parallel.</p>
+              <span class="project-card__cta">View live site ↗</span>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://lbelegu.github.io/patrol-demographics-calculator/" target="_blank">
+            <div class="project-card__media">
+              <img src="assets/img/projects/patrol-demographics.webp" alt="Map of New York City patrol districts with the demographic breakdown for one district" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Civic tech · build4good</p>
+              <h3 class="project-card__title">Patrol Demographics Calculator</h3>
+              <p class="project-card__summary">Maps demographic disparities across police patrol areas using Census
+                data.</p>
+              <span class="project-card__cta">View live site ↗</span>
+            </div>
+          </a>
+        </div>
+
+        <ul class="project-list" role="list">
+          <li class="project-list__item">
+            <span class="project-list__name">SocialPulse</span>
+            <span class="project-list__desc">Full-stack social app with ML moderation · React, MongoDB</span>
+          </li>
+          <li class="project-list__item">
+            <span class="project-list__name">AI Recipe Generator</span>
+            <span class="project-list__desc">Ingredient matching with embeddings · Python</span>
+          </li>
+          <li class="project-list__item">
+            <span class="project-list__name">Replica Voting Algorithm</span>
+            <span class="project-list__desc">Fault-tolerance simulation and ML prediction · Python</span>
+          </li>
+        </ul>
+        <a class="text-link" href="https://github.com/lbelegu?tab=repositories" target="_blank">More on GitHub ↗</a>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <div class="section__header">
+          <h2 id="experience-title">Experience</h2>
+          <p class="section__note">Different fields, same job, each one linked to the next</p>
+        </div>
+
+        <ol class="xp-chain" role="list">
+          <li>
+            <article class="xp-card xp-card--current">
+              <span class="xp-card__badge" aria-hidden="true">CC</span>
+              <div class="xp-card__body">
+                <header class="xp-card__header">
+                  <h3 class="xp-card__role">Fellow</h3>
+                  <span class="xp-card__dates">2026 – Now</span>
+                </header>
+                <p class="xp-card__org">Claude Corps · CodePath</p>
+                <p class="xp-card__summary">Placed with a mission-driven host organization.</p>
+                <ul class="xp-card__tags" role="list">
+                  <li class="xp-card__tag xp-card__tag--sector">Public interest tech</li>
+                  <li class="xp-card__tag">Product</li>
+                </ul>
+              </div>
+            </article>
+            <span class="chain" aria-hidden="true">
+              <span class="chain__link chain__link--top"></span>
+              <span class="chain__link chain__link--middle"></span>
+              <span class="chain__link chain__link--bottom"></span>
+            </span>
+          </li>
+
+          <li>
+            <article class="xp-card">
+              <span class="xp-card__badge xp-card__badge--logo" aria-hidden="true"><img src="assets/img/logos/build4good.png" alt=""></span>
+              <div class="xp-card__body">
+                <header class="xp-card__header">
+                  <h3 class="xp-card__role">Alumni Council Member</h3>
+                  <span class="xp-card__dates">2025 – Now</span>
+                </header>
+                <p class="xp-card__org">build4good</p>
+                <p class="xp-card__summary">Launch open-source projects alumni build together, mentor 2026-cohort
+                  interns, and interview new candidates.</p>
+                <ul class="xp-card__tags" role="list">
+                  <li class="xp-card__tag xp-card__tag--sector">Civic tech</li>
+                  <li class="xp-card__tag">Mentorship</li>
+                  <li class="xp-card__tag">Open source</li>
+                </ul>
+              </div>
+            </article>
+            <span class="chain" aria-hidden="true">
+              <span class="chain__link chain__link--top"></span>
+              <span class="chain__link chain__link--middle"></span>
+              <span class="chain__link chain__link--bottom"></span>
+            </span>
+          </li>
+
+          <li>
+            <article class="xp-card">
+              <span class="xp-card__badge xp-card__badge--logo" aria-hidden="true"><img src="assets/img/logos/new-america.png" alt=""></span>
+              <div class="xp-card__body">
+                <header class="xp-card__header">
+                  <h3 class="xp-card__role">Frontend Developer</h3>
+                  <span class="xp-card__dates">Feb – Jun 2025</span>
+                </header>
+                <p class="xp-card__org">New America</p>
+                <p class="xp-card__summary">Built the front end of the Data Rescue Portal with the Data Rescue
+                  Project: a searchable archive that now holds 9,700+ datasets.</p>
+                <ul class="xp-card__tags" role="list">
+                  <li class="xp-card__tag xp-card__tag--sector">Federal data</li>
+                  <li class="xp-card__tag">Jekyll</li>
+                  <li class="xp-card__tag">Bootstrap</li>
+                </ul>
+              </div>
+            </article>
+            <span class="chain" aria-hidden="true">
+              <span class="chain__link chain__link--top"></span>
+              <span class="chain__link chain__link--middle"></span>
+              <span class="chain__link chain__link--bottom"></span>
+            </span>
+          </li>
+
+          <li>
+            <article class="xp-card">
+              <span class="xp-card__badge xp-card__badge--logo" aria-hidden="true"><img src="assets/img/logos/fab-inc.png" alt=""></span>
+              <div class="xp-card__body">
+                <header class="xp-card__header">
+                  <h3 class="xp-card__role">Data Science Intern</h3>
+                  <span class="xp-card__dates">Aug – Oct 2024</span>
+                </header>
+                <p class="xp-card__org">Fab Inc.</p>
+                <p class="xp-card__summary">Clustered conversations from an educational AI chatbot in Sierra Leone and
+                  showed math was the biggest pain point, reshaping the team's backlog.</p>
+                <ul class="xp-card__tags" role="list">
+                  <li class="xp-card__tag xp-card__tag--sector">Global edtech</li>
+                  <li class="xp-card__tag">Python</li>
+                  <li class="xp-card__tag">NLP</li>
+                </ul>
+              </div>
+            </article>
+            <span class="chain" aria-hidden="true">
+              <span class="chain__link chain__link--top"></span>
+              <span class="chain__link chain__link--middle"></span>
+              <span class="chain__link chain__link--bottom"></span>
+            </span>
+          </li>
+
+          <li>
+            <article class="xp-card">
+              <span class="xp-card__badge xp-card__badge--logo" aria-hidden="true"><img src="assets/img/logos/alaska-afterschool-network.png" alt=""></span>
+              <div class="xp-card__body">
+                <header class="xp-card__header">
+                  <h3 class="xp-card__role">Data Management Intern</h3>
+                  <span class="xp-card__dates">Jun – Jul 2024</span>
+                </header>
+                <p class="xp-card__org">build4good · Alaska Afterschool Network</p>
+                <p class="xp-card__summary">Built a scraper that replaced weeks of manual data entry and rebuilt the
+                  network's Salesforce CRM and reporting.</p>
+                <ul class="xp-card__tags" role="list">
+                  <li class="xp-card__tag xp-card__tag--sector">Youth nonprofits</li>
+                  <li class="xp-card__tag">ETL</li>
+                  <li class="xp-card__tag">Salesforce</li>
+                </ul>
+              </div>
+            </article>
+            <span class="chain" aria-hidden="true">
+              <span class="chain__link chain__link--top"></span>
+              <span class="chain__link chain__link--middle"></span>
+              <span class="chain__link chain__link--bottom"></span>
+            </span>
+          </li>
+
+          <li>
+            <article class="xp-card">
+              <span class="xp-card__badge xp-card__badge--logo" aria-hidden="true"><img src="assets/img/logos/unadat.png" alt=""></span>
+              <div class="xp-card__body">
+                <header class="xp-card__header">
+                  <h3 class="xp-card__role">PM &amp; Software Engineer Intern</h3>
+                  <span class="xp-card__dates">Jul – Aug 2023</span>
+                </header>
+                <p class="xp-card__org">Unadat</p>
+                <p class="xp-card__summary">Led a 13-person intern team through sprints and shipped a real-time data
+                  dashboard.</p>
+                <ul class="xp-card__tags" role="list">
+                  <li class="xp-card__tag xp-card__tag--sector">Startups</li>
+                  <li class="xp-card__tag">PHP</li>
+                  <li class="xp-card__tag">Agile</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ol>
+
+        <a class="text-link" href="https://www.linkedin.com/in/leonbelegu/" target="_blank">Full history on LinkedIn
+          ↗</a>
+      </section>
+
+      <section id="toolkit" class="section" aria-labelledby="toolkit-title">
+        <h2 id="toolkit-title">Toolkit</h2>
+        <div class="toolkit">
+          <div class="toolkit__group">
+            <h3 class="toolkit__label">Build</h3>
+            <ul class="toolkit__items" role="list">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>SQL</li>
             </ul>
           </div>
-
-          <!-- experience card 2 -->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Data Science Intern | Fab Inc.
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Aug. 2024 - Oct. 2024</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Conducted clustering analysis on chatbot conversation threads to identify key subject areas using
-                Python and scikit-learn.</li>
-              <li>Generated and visualized message embeddings with t-SNE, highlighting communication trends across
-                research groups.</li>
-              <li>Used statistical methods (t-tests, chi-square) to assess variation in message frequency and thread
-                interactions.</li>
+          <div class="toolkit__group">
+            <h3 class="toolkit__label">Data</h3>
+            <ul class="toolkit__items" role="list">
+              <li>Pandas</li>
+              <li>scikit-learn</li>
+              <li>GeoPandas</li>
+              <li>Salesforce</li>
+              <li>dbt</li>
+              <li>Tableau</li>
             </ul>
           </div>
-
-          <!-- experience card 3-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Data Management Intern | Alaska Afterschool Network with build4good
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Jun. 2024 - Jul. 2024</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Automated data entry workflows with Python, BeautifulSoup, and Pandas, reducing manual processing
-                time.</li>
-              <li>Built Salesforce objects and handled data imports to optimize system functionality.</li>
-              <li>Supported AI chatbot development for OER Commons focused on accessibility and voice recognition.</li>
-            </ul>
-          </div>
-
-          <!-- experience card 4-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Product Manager & Software Engineer Intern | Unadat
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Remote | Jul. 2023 - Aug. 2023</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Led a software team of 13 using Agile methodologies to track tasks in Asana and conduct daily
-                stand-ups.</li>
-              <li>Redesigned application UI and implemented a data-driven dynamic module using JavaScript, PHP, and CSS
-                in GCS.</li>
-              <li>Created weekly progress reports and presented updates in team demos via Notion.</li>
+          <div class="toolkit__group">
+            <h3 class="toolkit__label">Ship</h3>
+            <ul class="toolkit__items" role="list">
+              <li>Git</li>
+              <li>GitHub Actions</li>
+              <li>Supabase</li>
+              <li>Docker</li>
+              <li>Figma</li>
+              <li>Claude Code</li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects -->
-    <section id="projects" class="relative z-10 py-24 px-6 flex justify-center">
-      <div class="max-w-5xl w-full">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center">
-          Projects
-        </h2>
-
-        <div class="grid gap-10 md:grid-cols-2">
-          <!-- project card 1-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              Replica Voting Algorithm
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Python, scikit-learn, TensorFlow, NumPy, Matplotlib | Jan. 2025 - May
-              2025</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Designed and simulated a Replica Voting Algorithm to evaluate fault tolerance in distributed systems
-                with varying client/server counts and failure probabilities.</li>
-              <li>Trained and compared three ML models (LSTM, Random Forest, Gradient Boosting) achieving high
-                predictive accuracy (low MAE and RMSE).</li>
-              <li>Performed statistical analysis and built 10+ data visualizations in Matplotlib to assess performance
-                trade-offs.</li>
-            </ul>
-          </div>
-
-          <!-- project card 2-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)]">
-            <h3 class="text-xl font-semibold text-red-400">
-              AI Recipe Generator
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">Python, scikit-learn, Pandas, SentenceTransformer | Nov. 2024 - Dec.
-              2024</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Built an AI-powered recipe recommendation system using SentenceTransformer embeddings and cosine
-                similarity to match user-input ingredients with recipes.</li>
-              <li>Optimized accuracy via feature engineering and class imbalance handling, improving recommendation
-                performance.</li>
-            </ul>
-          </div>
-
-          <!-- project card 3-->
-          <div
-            class="bg-black/30 backdrop-blur-md border border-red-950/40 shadow-[0_0_40px_rgba(255,0,0,0.15)] rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(255,0,0,0.3)] md:col-span-2">
-            <h3 class="text-xl font-semibold text-red-400">
-              SocialPulse
-            </h3>
-            <p class="text-gray-400 text-sm mb-3">JavaScript, React, CSS, HTML, Heroku, MongoDB, Cloudinary | Sep. 2023
-              - Dec. 2023</p>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-              <li>Developed and designed a full-stack messaging and posting app using React and MongoDB, with Cloudinary
-                for media uploads and Heroku deployment.</li>
-              <li>Produced 70+ pages of technical documentation, including ER diagrams, collaboration diagrams, and
-                detailed use-case diagrams for all system actions.</li>
-            </ul>
-          </div>
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Working on something that matters? Let's talk.</h2>
+        <p class="contact__lede">Open to public interest tech, nonprofit and mission-driven roles across engineering,
+          data and product.</p>
+        <div class="contact__actions">
+          <a class="button button--light" href="mailto:leonbelegu2003@gmail.com">leonbelegu2003@gmail.com</a>
+          <a class="button button--outline" href="https://www.linkedin.com/in/leonbelegu/" target="_blank">LinkedIn
+            ↗</a>
         </div>
-      </div>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="py-16 text-center text-white">
-      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-      <div class="space-y-2">
-        <p class="text-lg">
-          <a href="tel:+13479221379" class="hover:text-indigo-400 transition">347-922-1379</a>
-        </p>
-        <p class="text-lg">
-          <a href="mailto:leonbelegu2003@gmail.com" class="hover:text-indigo-400 transition">
-            leonbelegu2003@gmail.com
-          </a>
-        </p>
-        <p class="text-lg">
-          <a href="https://linkedin.com/in/leonbelegu/" target="_blank" class="hover:text-indigo-400 transition">
-            linkedin.com/in/leonbelegu
-          </a>
-        </p>
-        <p class="text-lg">
-          <a href="https://github.com/lbelegu" target="_blank" class="hover:text-indigo-400 transition">
-            github.com/lbelegu
-          </a>
-        </p>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
-  <!-- button to top -->
-  <button id="to-top"
-    class="fixed bottom-4 right-4 p-3 bg-red-500 text-white rounded-full z-20 shadow-lg hover:bg-blue-600 transition hidden">
-    ↑
-  </button>
-
-  <!-- Footer -->
-  <footer class="py-4 bg-gray-300 dark:bg-black text-center">
-    <p>&copy; <span id="year"></span> Leon Belegu. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© 2026 Leon Belegu</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
-
-<!-- TODO:
-- fix header for mobile view
-- fix light mode styles
-- elaborate on all my content
-- add in more projects/experience (AND LINKS)
-- add a section for education
-- fix headings for each section. inside or outside the boxes?
-- custom make the preview for links
-- make scroll up button smaller for mobile?
- -->
